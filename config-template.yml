@@ -1,0 +1,8 @@
+VERSION      : "v1.0.0"
+CLIENT_ID    : "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+CLIENT_SECRET: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+REDDIT_USER  : "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+REDDIT_PASS  : "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+REDIRECT_URI : "https://example.com"
+PLATFORM     : "platform"
+SCOPE        : "scope1 scope2 scope3"
