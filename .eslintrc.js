@@ -1,33 +1,33 @@
 module.exports = {
   root: true,
-  parser: "vue-eslint-parser",
   env: {
     node: true
   },
   globals: {
     Vue: true
   },
+  parser: "vue-eslint-parser",
   parserOptions: {
     ecmaVersion: 2020,
     sourceType: "module"
   },
   plugins: [
     "vue"
+    // "@typescript-eslint"
   ],
-  ignorePatterns: [],
+  ignorePatterns: ["backend/out", "src/bootstrap-vue"],
   // Base linting rules to use
   extends: [
-    "eslint:recommended",
     "plugin:vue/vue3-recommended",
-    "plugin:vue/vue3-essential",
     "@vue/standard",
-    "@vue/typescript/recommended"
+    "@vue/typescript/recommended",
+    "eslint:recommended"
   ],
   // My custom rules to override the above base linting rules
   rules: {
     "vue/max-attributes-per-line": "off",
     "vue/singleline-html-element-content-newline": "off",
-    // "space-before-function-paren": "off",
+    "space-before-function-paren": "off",
     "@typescript-eslint/no-empty-function": "warn",
     "vue/no-multi-spaces": "off",
 
@@ -36,17 +36,17 @@ module.exports = {
     "@typescript-eslint/object-property-newline": "off",
 
     // TODO: TEMPORARY! THESE SHOULD NOT BE OFF!!!
-    // "@typescript-eslint/typedef": "off",
-    // "no-process-env": "warn",
-    // "no-underscore-dangle": "warn",
-    // "no-magic-numbers": ["off"],
-    // "typescript-eslint/type-annotation-spacing": "off",
-    // "eslint@typescript-eslint/type-annotation-spacing": "off",
+    "@typescript-eslint/typedef": "off",
+    "no-process-env": "warn",
+    "no-underscore-dangle": "warn",
+    "no-magic-numbers": ["off"],
+    "typescript-eslint/type-annotation-spacing": "off",
+    "eslint@typescript-eslint/type-annotation-spacing": "off",
 
     // https://eslint.org/docs/rules/
 
     // Possible Errors
-    "no-await-in-loop":"error",
+    // "no-await-in-loop":"error",
     "no-constant-condition": "warn",
     "no-unreachable": "warn",
 
@@ -61,24 +61,23 @@ module.exports = {
     "no-floating-decimal": "error",
     "no-implicit-globals": "error",
     "no-loop-func": "error",
-    "no-magic-numbers": ["warn", { ignore: [-1, 0, 1, 2, 3, 16, 32, 100], ignoreArrayIndexes: true }],
+    // "no-magic-numbers": ["off"],
+    // "no-magic-numbers": ["warn", { ignore: [-1, 0, 1, 2, 80, 200, 303, 400, 401, 404, 500], ignoreArrayIndexes: true }],
     "no-multi-spaces": "off",
-    radix: ["error", "always"],
+    "radix": ["error", "always"],
     "require-await": "error",
 
     // Variables
     "no-label-var": "error",
     "no-shadow": "error",
     "no-use-before-define": ["error", { functions: true, classes: true, variables: true }],
-    "no-unmodified-loop-condition": "off",
-    "vue/one-component-per-file": "off",
 
     // Node.js and CommonJS
     "no-buffer-constructor": "error",
     "no-path-concat": "error",
-    // "no-process-env": "error", // NEW, remove this if it causes problems
+    // "no-process-env": "error",
 
-    // Stylistic Rules
+    // Stylistic Issues
     "array-bracket-spacing": ["error", "never"],
     camelcase: ["warn", { properties: "never" }],
     "comma-dangle": ["error", "never"],
@@ -92,12 +91,12 @@ module.exports = {
     "linebreak-style": ["error", "unix"],
     "new-cap": ["error", { capIsNew: false }],
     "no-multi-assign": "error",
-    "no-multiple-empty-lines": ["warn", { max: 1, maxEOF: 0 }],
+    "no-multiple-empty-lines": ["error", { max: 1, maxEOF: 0 }],
     "no-negated-condition": "error",
     "no-new-object": "error",
     "no-tabs": "error",
     "no-trailing-spaces": "error",
-    // "no-underscore-dangle": "error", // NEW, remove this if it causes problems
+    // "no-underscore-dangle": "error",
     "no-whitespace-before-property": "error",
     "nonblock-statement-body-position": ["error", "beside"],
     "one-var": ["error", "never"],
@@ -112,7 +111,7 @@ module.exports = {
     "semi-spacing": "error",
     "semi-style": ["error", "last"],
     "space-before-blocks": "error",
-    "space-before-function-paren": ["error", { named: "never", asyncArrow: "always" }], // NEW, remove this if it causes problems
+    // "space-before-function-paren": ["error", { named: "never", asyncArrow: "always" }],
     "space-in-parens": ["error", "never"],
     "space-unary-ops": "error",
     "spaced-comment": ["error", "always"],
@@ -129,9 +128,9 @@ module.exports = {
     // Misc
     "key-spacing": "off",
     "object-curly-spacing": "off",
-    "block-spacing": "off",
-    "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",  // NEW, remove this if it causes problems
-    "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off", // NEW, remove this if it causes problems
+    "block-spacing": "off"
+    // "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
+    // "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
 
     // TypeScript
 
@@ -151,6 +150,6 @@ module.exports = {
     // "@typescript-eslint/type-annotation-spacing": "off",
     // "@typescript-eslint/no-inferrable-types": "off",
     // "@typescript-eslint/no-explicit-any": "warn",
-    "@typescript-eslint/no-unused-vars": "warn"
+    // "@typescript-eslint/no-unused-vars": "warn"
   }
 };

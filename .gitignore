@@ -1,3 +1,7 @@
 node_modules
-config.yml
-ngrok.exe
+/dist
+/out
+
+config-local.yml
+config-dev.yml
+config-prod.yml

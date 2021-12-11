@@ -9,10 +9,11 @@
     "importHelpers": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "resolveJsonModule": true,
+    "outDir": "backend/out",
     "baseUrl": ".",
-    "jsx": "preserve",
-    "outDir": "out",
+    "types": [
+      "webpack-env"
+    ],
     "paths": {
       "@/*": [
         "src/*"
@@ -26,9 +27,14 @@
     ]
   },
   "include": [
-    "src/main.ts",
+    "src/**/*.ts",
+    "src/**/*.vue",
+    "backend/server.ts"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "deploy-backend.ts",
+    "deploy-frontend.ts",
+    "backend/out/server.js"
   ]
 }

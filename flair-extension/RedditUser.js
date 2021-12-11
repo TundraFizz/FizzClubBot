@@ -7,7 +7,7 @@
   * @returns {Promise} A Promise that fulfills with the current user after the request is complete
   * @example r.getUser('not_an_aardvark').assignFlair({subredditName: 'snoowrap', text: "Isn't an aardvark"})
   */
-   selectFlairUser(options) {
+  selectFlairUser(options) {
     return this._r._selectFlairUser(_objectSpread({}, options, {
       name: this.name
     })).return(this);

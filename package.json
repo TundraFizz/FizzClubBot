@@ -1,29 +1,79 @@
 {
   "name": "fizz-club-bot",
   "version": "1.0.0",
-  "scripts": {},
+  "description": "Fizz Club Bot",
+  "author": "Tundra Fizz",
+  "private": true,
+  "scripts": {
+    "api_local": "set mode=local&& nodemon --watch backend -e ts --exec node -r ts-node/register backend/server.ts",
+    "vue_local": "set local=true&& vue-cli-service serve --port 8001 --mode development --open src/main.ts",
+    "api_dev": "tsc; mode=dev node backend/out/server.js",
+    "vue_dev": "NODE_ENV=dev vue-cli-service serve --mode production --open src/main.ts",
+    "api_prod": "tsc; mode=prod node backend/out/server.js",
+    "vue_prod_old_2": "NODE_ENV=prod vue-cli-service serve --port 8001 --mode production --open src/main.ts",
+    "vue_prod": "vue-cli-service serve --mode production",
+    "vue_prod_orig": "NODE_ENV=prod vue-cli-service serve --port 8001 --mode production",
+    "build_frontend": "NODE_ENV=prod vue-cli-service build --mode production",
+    "build_frontend_2": "vue-cli-service build --mode production",
+    "build_frontend_3": "vue-cli-service build --modern --mode production; purgecss --css ./dist/bootstrap-4.5.3.min.css --content ./dist/**/*.js --output ./dist/bootstrap-4.5.3.min.css",
+    "build_backend": "tsc",
+    "serve_frontend": "node server.js",
+    "serve_frontend_2": "serve -s dist --no-clipboard --listen 8001",
+    "build_frontend_test": "vue-cli-service build --mode production",
+    "deploy_frontend": "TODO"
+  },
   "dependencies": {
     "axios": "^0.24.0",
-    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.6",
+    "core-js": "^3.6.5",
     "cors": "^2.8.5",
-    "express": "^4.17.1",
     "js-yaml": "^4.1.0",
+    "mysql2": "^2.3.3",
+    "register-service-worker": "^1.7.1",
     "sha.js": "^2.4.11",
-    "snoowrap": "^1.23.0"
+    "snoowrap": "^1.23.0",
+    "vue": "^3.0.0",
+    "vue-router": "^4.0.0-0",
+    "vue3-cookies": "^1.0.6"
   },
   "devDependencies": {
+    "@gfx/zopfli": "^1.0.15",
+    "@types/cookie-parser": "^1.4.2",
     "@types/cors": "^2.8.12",
-    "@types/express": "^4.17.13",
     "@types/js-yaml": "^4.0.5",
-    "@types/node": "^16.11.12",
     "@types/sha.js": "^2.4.0",
     "@typescript-eslint/eslint-plugin": "^4.18.0",
     "@typescript-eslint/parser": "^4.18.0",
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-plugin-pwa": "~4.5.0",
+    "@vue/cli-plugin-router": "~4.5.0",
+    "@vue/cli-plugin-typescript": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/compiler-sfc": "^3.0.0",
+    "@vue/eslint-config-standard": "^5.1.2",
+    "@vue/eslint-config-typescript": "^7.0.0",
+    "compression-webpack-plugin": "^9.1.1",
     "eslint": "^6.7.2",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.0",
-    "typescript": "^4.5.2"
+    "eslint-plugin-vue": "^7.0.0",
+    "purgecss-webpack-plugin": "^4.1.3",
+    "sass": "^1.26.5",
+    "sass-loader": "^8.0.2",
+    "ts-node": "^10.4.0",
+    "typescript": "~4.1.5"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "babel": {
+    "presets": [
+      "@vue/cli-plugin-babel/preset"
+    ]
   }
 }
