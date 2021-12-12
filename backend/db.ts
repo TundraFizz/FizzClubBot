@@ -32,6 +32,16 @@ export class Database {
     else                return null;
   }
 
+  async GetChampionMastery(subreddit: string): Promise<any> {// eslint-disable-line
+    const results = await this.Query(`SELECT pointsRequired, text FROM champion_mastery WHERE subreddit=? ORDER BY pointsRequired ASC`, [subreddit]);
+    return results;
+  }
+
+  async GetLeagueRank(subreddit: string): Promise<any> {// eslint-disable-line
+    const results = await this.Query(`SELECT flairId, rank FROM league_rank WHERE subreddit=?`, [subreddit]);
+    return results;
+  }
+
   // ==================== INSERT ====================
   async InsertSecret(username: string, secret: string): Promise<void> {
     await this.Query(`

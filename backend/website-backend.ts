@@ -139,13 +139,14 @@ async function GetLeagueRank(apiRegion: string, encryptedSummonerId: string): Pr
   return currentTier;
 }
 
-function GetFlairChampionMastery(championMasteryPoints: number): string|null {
-  const mastery: {[index: number]: string} = {
-    100000 : "100k",
-    250000 : "250k",
-    500000 : "500k",
-    1000000: "1 million"
-  };
+async function GetFlairChampionMastery(subredditName: string, championMasteryPoints: number): Promise<string|null> {
+  const mastery: {[index: number]: string} = {};
+  const rows = await db.GetChampionMastery(subredditName);
+
+  for (const row of rows) {
+    const { pointsRequired, text } = row;
+    mastery[pointsRequired] = text;
+  }
 
   let hash = null;
 
@@ -162,28 +163,27 @@ function GetFlairChampionMastery(championMasteryPoints: number): string|null {
   return hash;
 }
 
-function GetFlairLeagueRank(leagueRank: string|null): [string|null, string|null] {
+async function GetFlairLeagueRank(subredditName: string, leagueRank: string|null): Promise<[string|null, string|null]> {
   if (leagueRank === null || leagueRank === "UNRANKED") {
     return [null, null];
   }
 
-  // Riot Games gives the league rank string in all uppercase, so I need to make it lowercase and then uppercase the first character
+  // Riot Games gives the league rank string in all UPPERCASE, so I need to make it lowercase and then uppercase the first character
   leagueRank = leagueRank.toLowerCase();
   leagueRank = leagueRank.charAt(0).toUpperCase() + leagueRank.slice(1);
 
-  const ranks: {[index: string]: string} = {
-    Iron       : "91a5409a-5960-11ec-932b-c62003c7c2b3",
-    Bronze     : "a01f3eb4-5960-11ec-9094-9e0666b62558",
-    Silver     : "a9bdcd46-5960-11ec-9cba-3a3f91edefbb",
-    Gold       : "bbcd9d4a-5960-11ec-a878-da406b23d908",
-    Platinum   : "c6bd77de-5960-11ec-a5ce-c2aa08c54095",
-    Diamond    : "fb43632e-5960-11ec-9709-6addb9e175c5",
-    Master     : "01983574-5961-11ec-bac4-267d1a9f2cd1",
-    Grandmaster: "0800b472-5961-11ec-a109-72c4385a27b6",
-    Challenger : "12a63a46-5961-11ec-8c66-6ac4af511a86"
-  };
+  const ranks: {[index: string]: string} = {};
+  const rows = await db.GetLeagueRank(subredditName);
 
-  return [leagueRank, ranks[leagueRank]];
+  for (const row of rows) {
+    const { rank, flairId } = row;
+    ranks[rank] = flairId;
+  }
+
+  return [
+    leagueRank,
+    ranks[leagueRank]
+  ];
 }
 
 app.post("/check-secret", async (req, res) => {
@@ -270,8 +270,8 @@ app.post("/verify-league", async (req, res) => {
 
   const championMasteryPoints          = await GetChampionMasteryPoints(region, encryptedSummonerId, CHAMPION_ID);
   const leagueRank                     = await GetLeagueRank(region, encryptedSummonerId);
-  const flairTextChampionMastery       = GetFlairChampionMastery(championMasteryPoints);
-  const [flairTextLeagueRank, flairId] = GetFlairLeagueRank(leagueRank);
+  const flairTextChampionMastery       = await GetFlairChampionMastery(subredditName, championMasteryPoints);
+  const [flairTextLeagueRank, flairId] = await GetFlairLeagueRank(subredditName, leagueRank);
 
   let flairTemplateId = "";
   let text            = "";
@@ -297,7 +297,6 @@ app.post("/verify-league", async (req, res) => {
     text           : text
   };
 
-  snoowrap.getUser("FizzClubBot").selectFlairUser(flairOptions);
   snoowrap.getUser(username).selectFlairUser(flairOptions);
 
   res.status(200).send("Your flair has been updated");

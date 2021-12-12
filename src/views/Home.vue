@@ -84,8 +84,6 @@ export default defineComponent({
       this.message     = localStorage.getItem("error");
       localStorage.removeItem("error");
       this.redditAccountLinked = false;
-      console.log(this.messageType);
-      console.log(this.message);
       return;
     }
 
