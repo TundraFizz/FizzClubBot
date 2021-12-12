@@ -2,7 +2,6 @@
 
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 import Home from "./views/Home.vue";
-import About from "./views/About.vue";
 import RedditAuth from "./views/RedditAuth.vue";
 
 const routes: Array<RouteRecordRaw> = [
@@ -10,11 +9,6 @@ const routes: Array<RouteRecordRaw> = [
     path: "/",
     name: "Home",
     component: Home
-  },
-  {
-    path: "/about",
-    name: "About",
-    component: About
   },
   {
     path: "/reddit-auth",

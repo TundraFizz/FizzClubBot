@@ -13,6 +13,10 @@ import axios from "axios";
 axios.defaults.validateStatus = ():boolean => {return true;};
 
 async function GetAccountData(apiRegion: string, summonerName: string): Promise<string|null> {
+  if (summonerName.length < 1) {
+    return null;
+  }
+
   // The summoner name must be URI-encoded
   summonerName = encodeURIComponent(summonerName);
 
@@ -239,14 +243,13 @@ app.post("/verify-league", async (req, res) => {
   // Hash the Summoner Name to generate a verification code (shortened to 8 characters)
   const name   = req.body.name;
   const region = req.body.region;
-  // const hash   = (new sha256().update(name.toLowerCase()).digest("hex")).substring(0, 8); // eslint-disable-line
-  const hash   = "c2b0453b";
+  const hash   = (new sha256().update(name.toLowerCase().replace(/\s/g, "")).digest("hex")).substring(0, 8); // eslint-disable-line
 
   // Get the encrypted summoner id
   const encryptedSummonerId = await GetAccountData(region, name);
 
   if (typeof encryptedSummonerId !== "string") {
-    res.json({error: true, message: "Invalid summoner name and region"});
+    res.status(400).send("Invalid summoner name and region");
     return;
   }
 
@@ -286,48 +289,9 @@ app.post("/verify-league", async (req, res) => {
     text           : text
   };
 
-  const r = snoowrap.getUser("FizzClubBot").selectFlairUser(flairOptions);
+  snoowrap.getUser("FizzClubBot").selectFlairUser(flairOptions);
 
   res.status(200).send("Your flair has been updated");
-});
-
-app.get("/", async (req, res) => {
-  // console.log("!!!!!");
-  // res.json({abc: "def"});
-  // return;
-
-  console.log(req.query);
-  // const state = req.query.state; // Unused
-  const code = req.query.code as string;
-
-  const base64 = Buffer.from(`${config.CLIENT_ID_WEB_APP}:${config.CLIENT_SECRET_WEB_APP}`).toString("base64");
-
-  const options = {
-    headers: {
-      Authorization : `Basic ${base64}`,
-      "Content-Type": "application/x-www-form-urlencoded",
-      "User-Agent"  : `${config.PLATFORM}:${config.CLIENT_ID_WEB_APP}:${config.VERSION}`
-    },
-    params: {
-      grant_type  : "authorization_code",
-      code        : code,
-      redirect_uri: config.REDIRECT_URI
-    }
-  };
-
-  const response = await axios.post(`https://www.reddit.com/api/v1/access_token`, {}, options);
-  const accessToken = response.data.access_token;
-  const response2 = await axios.get("https://oauth.reddit.com/api/v1/me", {headers: {Authorization: `Bearer ${accessToken}`}});
-
-  const flairOptions = {
-    subredditName  : "FizzClubBotSandbox",
-    flairTemplateId: "fb43632e-5960-11ec-9709-6addb9e175c5",
-    text           : "This is a test"
-  };
-
-  // const r = snoowrap.getUser(response2.data.name).selectFlairUser(flairOptions);
-
-  res.json({});
 });
 
 // Notes

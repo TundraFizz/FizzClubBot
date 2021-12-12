@@ -8,7 +8,12 @@
 </template>
 
 <style lang="scss">
-#app {
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  color: #d9d9d9;
+  background-color: #002a5e;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

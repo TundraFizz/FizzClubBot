@@ -4,19 +4,10 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import { useCookies } from "vue3-cookies";
 import axios from "axios";
 
 export default defineComponent({
-  setup: function () {
-    const { cookies } = useCookies();
-
-    return {
-      cookies
-    };
-  },
   created: async function () {
-    // const ref = this.cookies.get("ref");
     if ("code" in this.$route.query) {
       const code = this.$route.query.code as string;
 
@@ -32,10 +23,10 @@ export default defineComponent({
         return;
       }
 
-      this.cookies.set("code", code);
+      localStorage.setItem("code", code);
       this.$router.push({ name: "Home" });
     } else {
-      this.cookies.remove("code");
+      localStorage.removeItem("code");
       this.$router.push({ name: "Home" });
     }
   }
