@@ -120,7 +120,8 @@ export default defineComponent({
     LinkLeagueAccount: async function () {
       const body = {
         name  : this.summonerName,
-        region: this.summonerRegion
+        region: this.summonerRegion,
+        secret: localStorage.getItem("code")
       };
 
       const response = await axios.post("https://fizz.ngrok.io/verify-league", body);

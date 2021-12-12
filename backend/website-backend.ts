@@ -243,7 +243,15 @@ app.post("/verify-league", async (req, res) => {
   // Hash the Summoner Name to generate a verification code (shortened to 8 characters)
   const name   = req.body.name;
   const region = req.body.region;
+  const secret = req.body.secret;
   const hash   = (new sha256().update(name.toLowerCase().replace(/\s/g, "")).digest("hex")).substring(0, 8); // eslint-disable-line
+
+  const username = await db.CheckSecret(secret);
+
+  if (username === null) {
+    res.status(400).send("Your Reddit account has been desynchronized, please click on the \"Disconnect\" button and re-verify your Reddit account");
+    return;
+  }
 
   // Get the encrypted summoner id
   const encryptedSummonerId = await GetAccountData(region, name);
@@ -290,6 +298,7 @@ app.post("/verify-league", async (req, res) => {
   };
 
   snoowrap.getUser("FizzClubBot").selectFlairUser(flairOptions);
+  snoowrap.getUser(username).selectFlairUser(flairOptions);
 
   res.status(200).send("Your flair has been updated");
 });
