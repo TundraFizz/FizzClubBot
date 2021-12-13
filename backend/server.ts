@@ -37,22 +37,14 @@ app.use(bodyParser.urlencoded({extended: true})); // Setting for bodyParser
 app.use(cookieParser());                          // Enable cookie parsing
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
-  // res.header("Access-Control-Allow-Origin", "bitspades.com");
-  // res.header("Access-Control-Allow-Origin", "api.bitspades.com");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
 });
 app.use(cors({ // CORS Configuration
   origin: [
-    "http://localhost:8001",
-    "http://localhost:9001",
-    "http://192.168.1.3:8001",
-    "http://192.168.1.3:9001",
     "https://tundra.ngrok.io",
     "https://fizz.ngrok.io",
-    "https://bitspades.com",
-    "https://api.bitspades.com",
-    "https://spadechip.com"
+    "https://championmains.club"
   ],
   methods: ["GET", "POST", "PUT", "OPTIONS", "DELETE"],
   allowedHeaders: [
