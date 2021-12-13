@@ -63,7 +63,7 @@ app.use(cors({ // CORS Configuration
 }));
 
 const http = require("http").Server(app);
-http.listen(9001);
+http.listen(80);
 
 export { app, snoowrap, config, db };
 
