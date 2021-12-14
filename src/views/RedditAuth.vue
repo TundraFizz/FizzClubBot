@@ -3,6 +3,7 @@
 </template>
 
 <script lang="ts">
+/* eslint-disable no-process-env */
 import { defineComponent } from "vue";
 import axios from "axios";
 
@@ -15,7 +16,7 @@ export default defineComponent({
         code: code
       };
 
-      const response = await axios.post("https://fizz.ngrok.io/verify-reddit", body);
+      const response = await axios.post(`${process.env.VUE_APP_BACKEND}/verify-reddit`, body);
 
       if (response.status !== 200) {
         localStorage.setItem("error", response.data);

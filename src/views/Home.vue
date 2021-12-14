@@ -48,6 +48,7 @@
 </template>
 
 <script lang="ts">
+/* eslint-disable no-process-env */
 import { defineComponent } from "vue";
 import axios from "axios";
 import { sha256 } from "sha.js";
@@ -91,7 +92,7 @@ export default defineComponent({
       secret: localStorage.getItem("code")
     };
 
-    const response = await axios.post("https://fizz.ngrok.io/check-secret", body);
+    const response = await axios.post(`${process.env.VUE_APP_BACKEND}/check-secret`, body);
 
     if (response.status === 200) {
       if (response.data) {
@@ -106,10 +107,10 @@ export default defineComponent({
   },
   methods: {
     LinkRedditAccount: function () {
-      const CLIENT_ID     = "UOheMK6_cUy_jkfeBhXSsA";
+      const CLIENT_ID     = process.env.VUE_APP_CLIENT_ID;
       const RESPONSE_TYPE = "code";
       const STATE         = "0";
-      const REDIRECT_URI  = encodeURIComponent("https://tundra.ngrok.io/reddit-auth");
+      const REDIRECT_URI  = encodeURIComponent(`${process.env.VUE_APP_FRONTEND}/reddit-auth`);
       const DURATION      = "temporary";
       const SCOPE         = "identity";
       const url = `https://www.reddit.com/api/v1/authorize?client_id=${CLIENT_ID}&response_type=${RESPONSE_TYPE}&state=${STATE}&redirect_uri=${REDIRECT_URI}&duration=${DURATION}&scope=${SCOPE}`;
@@ -117,12 +118,14 @@ export default defineComponent({
     },
     LinkLeagueAccount: async function () {
       const body = {
-        name  : this.summonerName,
-        region: this.summonerRegion,
-        secret: localStorage.getItem("code")
+        name     : this.summonerName,
+        region   : this.summonerRegion,
+        secret   : localStorage.getItem("code"),
+        // subreddit: "FizzClubBotSandbox" // TODO TEST HARD-CODED FOR NOW
+        subreddit: "fizzmains" // TODO TEST HARD-CODED FOR NOW
       };
 
-      const response = await axios.post("https://fizz.ngrok.io/verify-league", body);
+      const response = await axios.post(`${process.env.VUE_APP_BACKEND}/verify-league`, body);
 
       if (response.status === 200) {
         this.messageType = "ok";

@@ -8,14 +8,16 @@ const glob = require("glob");
 // const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 // const PurgeCSSPlugin = require("purgecss-webpack-plugin");
 
-process.env.VUE_APP_PLACEHOLDER = "testing";
-
 if (process.env.local) {
-  process.env.VUE_APP_PLACEHOLDER_2 = "testing_2";
-} else if (process.env.NODE_ENV === "dev") {
-  process.env.VUE_APP_PLACEHOLDER_2 = "testing_2";
-} else if (process.env.NODE_ENV === "prod") {
-  process.env.VUE_APP_PLACEHOLDER_2 = "testing_2";
+  process.env.VUE_APP_FRONTEND  = "https://tundra.ngrok.io";
+  process.env.VUE_APP_BACKEND   = "https://fizz.ngrok.io";
+  // process.env.VUE_APP_CLIENT_ID = "tWbOKI5bpI83bp9w4PAbyA";
+  process.env.VUE_APP_CLIENT_ID = "CdZTnxa03CgCYuZVPdsLEg"; // DELETE WHEN READY FOR PROD
+} else if (process.env.NODE_ENV === "dev") { // N/A
+} else if (process.env.NODE_ENV === "production") {
+  process.env.VUE_APP_FRONTEND  = "https://championmains.club";
+  process.env.VUE_APP_BACKEND   = "https://api.championmains.club";
+  process.env.VUE_APP_CLIENT_ID = "CdZTnxa03CgCYuZVPdsLEg";
 }
 
 // function addStyleResource (rule) {

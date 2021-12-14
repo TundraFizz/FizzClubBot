@@ -11,7 +11,7 @@ Serve frontend/backend for local development
 ```
 yarn run api_local
 yarn run vue_local
-./ngrok.exe http --hostname=tundra.ngrok.io 8001
+./ngrok.exe http --hostname=tundra.ngrok.io 80
 ./ngrok.exe http --hostname=fizz.ngrok.io   9001
 ```
 

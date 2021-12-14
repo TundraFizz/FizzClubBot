@@ -42,6 +42,13 @@ export class Database {
     return results;
   }
 
+  async GetChampionIdFromSubreddit(subreddit: string): Promise<number> {
+    const results = await this.Query(`SELECT championId FROM subreddits WHERE subreddit=?`, [subreddit]);
+
+    if (results.length) return results[0].championId;
+    else                return null;
+  }
+
   // ==================== INSERT ====================
   async InsertSecret(username: string, secret: string): Promise<void> {
     await this.Query(`

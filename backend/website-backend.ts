@@ -237,16 +237,21 @@ app.post("/verify-reddit", async (req, res) => {
 });
 
 app.post("/verify-league", async (req, res) => {
-  const CHAMPION_ID = 105;
-  const subredditName = "FizzClubBotSandbox";
-
   // Hash the Summoner Name to generate a verification code (shortened to 8 characters)
-  const name   = req.body.name;
-  const region = req.body.region;
-  const secret = req.body.secret;
-  const hash   = (new sha256().update(name.toLowerCase().replace(/\s/g, "")).digest("hex")).substring(0, 8); // eslint-disable-line
+  const name      = req.body.name;
+  const region    = req.body.region;
+  const secret    = req.body.secret;
+  const subreddit = req.body.subreddit;
+  const hash      = (new sha256().update(name.toLowerCase().replace(/\s/g, "")).digest("hex")).substring(0, 8); // eslint-disable-line
 
-  const username = await db.CheckSecret(secret);
+  const championId = await db.GetChampionIdFromSubreddit(subreddit);
+
+  if (championId === null) {
+    res.status(400).send("Invalid champion mains subreddit");
+    return;
+  }
+
+  const username   = await db.CheckSecret(secret);
 
   if (username === null) {
     res.status(400).send("Your Reddit account has been desynchronized, please click on the \"Disconnect\" button and re-verify your Reddit account");
@@ -268,10 +273,10 @@ app.post("/verify-league", async (req, res) => {
     return;
   }
 
-  const championMasteryPoints          = await GetChampionMasteryPoints(region, encryptedSummonerId, CHAMPION_ID);
+  const championMasteryPoints          = await GetChampionMasteryPoints(region, encryptedSummonerId, championId);
   const leagueRank                     = await GetLeagueRank(region, encryptedSummonerId);
-  const flairTextChampionMastery       = await GetFlairChampionMastery(subredditName, championMasteryPoints);
-  const [flairTextLeagueRank, flairId] = await GetFlairLeagueRank(subredditName, leagueRank);
+  const flairTextChampionMastery       = await GetFlairChampionMastery(subreddit, championMasteryPoints);
+  const [flairTextLeagueRank, flairId] = await GetFlairLeagueRank(subreddit, leagueRank);
 
   let flairTemplateId = "";
   let text            = "";
@@ -292,7 +297,7 @@ app.post("/verify-league", async (req, res) => {
   }
 
   const flairOptions = {
-    subredditName  : subredditName,
+    subredditName  : subreddit,
     flairTemplateId: flairTemplateId,
     text           : text
   };
