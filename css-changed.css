@@ -1,0 +1,2460 @@
+/*------------------------------------------CSS reddit.com/r/fizzmains-----------------------------------------------*/
+/*------------------------------------------last update 30 Oct 2020--------------------------------------------------*/
+/*------------------------------------------made by reddit.com/user/VOLT220------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+/* Easy modifiable part here */
+
+/* Style of the side bar text, that contains rules, builds, etc */
+
+/* This will remove the little disc in front of each item */
+.md ul li {
+  list-style-type: none;
+  font-family: "Trebuchet MS";
+}
+
+/* This is the background choser */
+
+.md h1:nth-of-type(5) {
+  display: none;
+}
+.md ul:nth-of-type(4) {
+  position: absolute;
+  z-index: 3000;
+  top: 165px;
+  right: 50px;
+}
+.md ul:nth-of-type(4) li {
+  opacity: 0.5;
+  float: right;
+  transition: 0.2s;
+  border-radius: 20px;
+}
+.md ul:nth-of-type(4) li:hover {
+  opacity: 1 !important;
+  transition: 0.2s;
+}
+
+.md ul:nth-of-type(4) li:nth-of-type(2) {
+  background: url(%%flairs%%);
+  background-position: 0px -210px;
+  background-repeat: no-repeat;
+  height: 30px;
+  top: 5px;
+}
+
+.md ul:nth-of-type(4) li:nth-of-type(3) {
+  background: url(%%flairs%%);
+  background-position: 0px -240px;
+  background-repeat: no-repeat;
+  height: 30px;
+  top: 5px;
+}
+
+.md ul:nth-of-type(4) li:nth-of-type(4) {
+  background: url(%%flairs%%);
+  background-position: 0px -270px;
+  background-repeat: no-repeat;
+  height: 30px;
+  top: 5px;
+}
+
+.md ul:nth-of-type(4) li:nth-of-type(5) {
+  background: url(%%flairs%%);
+  background-position: 0px -300px;
+  background-repeat: no-repeat;
+  height: 30px;
+  top: 5px;
+}
+
+.md ul:nth-of-type(4) li:nth-of-type(6) {
+  background: url(%%flairs%%);
+  background-position: 0px -330px;
+  background-repeat: no-repeat;
+  height: 30px;
+  top: 5px;
+}
+
+.md ul:nth-of-type(4) li:nth-of-type(7) {
+  background: url(%%flairs%%);
+  background-position: 0px -360px;
+  background-repeat: no-repeat;
+  height: 30px;
+  top: 5px;
+}
+
+.md ul:nth-of-type(4) li:nth-of-type(8) {
+  background: url(%%flairs%%);
+  background-position: 0px -390px;
+  background-repeat: no-repeat;
+  height: 30px;
+  top: 5px;
+}
+
+.md ul:nth-of-type(4) li:nth-of-type(9) {
+  background: url(%%flairs%%);
+  background-position: 0px -420px;
+  background-repeat: no-repeat;
+  height: 30px;
+  top: 5px;
+}
+
+.md ul:nth-of-type(4) li:nth-of-type(10) {
+  background: url(%%flairs%%);
+  background-position: 0px -450px;
+  background-repeat: no-repeat;
+  height: 30px;
+  top: 5px;
+}
+
+
+.md ul:nth-of-type(4) > li {
+  position: absolute;
+  opacity: 0;
+}
+.md ul:nth-of-type(4):hover > li {
+  opacity: 0.5;
+}
+
+.md ul:nth-of-type(4):hover li:nth-of-type(2) {
+  transform: translate(-30px, 0px);
+}
+.md ul:nth-of-type(4):hover li:nth-of-type(3) {
+  transform: translate(-60px, 0px);
+}
+.md ul:nth-of-type(4):hover li:nth-of-type(4) {
+  transform: translate(-90px, 0px);
+}
+.md ul:nth-of-type(4):hover li:nth-of-type(5) {
+  transform: translate(-120px, 0px);
+}
+.md ul:nth-of-type(4):hover li:nth-of-type(6) {
+  transform: translate(-150px, 0px);
+}
+.md ul:nth-of-type(4):hover li:nth-of-type(7) {
+  transform: translate(-180px, 0px);
+}
+.md ul:nth-of-type(4):hover li:nth-of-type(8) {
+  transform: translate(-210px, 0px);
+}
+.md ul:nth-of-type(4):hover li:nth-of-type(9) {
+  transform: translate(-240px, 0px);
+}
+.md ul:nth-of-type(4):hover li:nth-of-type(10) {
+  transform: translate(-270px, 0px);
+}
+.md ul:nth-of-type(4):hover li:nth-of-type(11) {
+  transform: translate(-300px, 0px);
+}
+.md ul:nth-of-type(4):hover li:nth-of-type(12) {
+  transform: translate(-330px, 0px);
+}
+.md ul:nth-of-type(4):hover li:nth-of-type(13) {
+  transform: translate(-360px, 0px);
+}
+
+/* This configures the Streamers section to make it a table with ranks and special flags */
+
+.side div.spacer div.titlebox .md-container div.md ul:nth-of-type(3) li a {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 20px;
+  margin-left: -40px;
+  font-size: small;
+  color: #adb0ba;
+}
+
+.side div.spacer div.titlebox .md-container div.md ul:nth-of-type(3) li a:hover {
+  background-color: #16181e !important;
+}
+
+/* ICONS
+  Iron   : -0px;
+  Bronze : -40px;
+  Silver : -80px;
+  Gold   : -120px;
+  Plat   : -160px;
+  Diamond    : -200px;
+  Master     : -240px;
+  GMaster    : -280px;
+  Challenger : -320px;
+
+  SytePepe   : -360px;
+  RyzeBeard  : -400px;
+  OneTrick   : -440px;
+  Frequent   : -480px;
+  Blank      : -520px;
+*/
+
+/* HORINTAL POSITIONS
+  1st : 100px; SPECIAL ICON
+  2nd : 150px; ONE TRICK ?
+  3rd : 200px; FREQUENT STREAMER ?
+  4th : 250px; RANK
+*/
+
+
+.md * li {
+  text-align: initial;
+  color: gainsboro;
+}
+
+.md h1 {
+  color: gainsboro;
+  font-family: "Trebuchet MS";
+  text-transform: uppercase;
+  background: #082535;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+.arrow {
+height: 20px;
+width: 20px
+}
+
+/* This is to modify the top reddit bar *pouf* */
+#sr-more-link {
+  display: none;
+}
+
+#sr-header-area {
+  display: inline;
+}
+
+#sr-header-area .sr-bar a, #sr-more-link, #sr-header-area .separator, #sr-header-area .dropdown.srdrop .selected {
+  background: transparent;
+  color: rgba(255,255,255,0.6);
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+}
+
+#sr-header-area .sr-bar a:hover, #sr-more-link:hover, #sr-header-area .dropdown.srdrop .selected:hover {
+  border: 0 solid;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  color: rgba(255,255,255,1);
+}
+
+#sr-header-area div.width-clip {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+#sr-header-area div.width-clip:hover {
+  background: #00000085;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.drop-choices.inuse {
+  display: block;
+  position: absolute;
+  z-index: 1003;
+}
+
+/*remove the header's cyan border that is ugly af */
+#header {
+border:none;
+}
+
+/*Banner stuff ---------------------------------------------------------------------------------------------------------*/
+
+.side .spacer .titlebox .md ul:nth-of-type(1) li:nth-of-type(8) a:hover:before, .side .spacer .titlebox .md ul:nth-of-type(1) li:nth-of-type(7) a:hover:before, .side .spacer .titlebox .md ul:nth-of-type(1) li:nth-of-type(6) a:hover:before {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#header-bottom-left{
+
+  background-size:35%,100%;
+  height: 330px;
+  background-position:left 0px top 0px, top -220px right 0px;
+
+  box-shadow: 0 8px 6px -6px black;
+
+  background-repeat: repeat-y, no-repeat;
+  background-color: black;
+}
+
+
+/*The bar with the message icon and your profile configs also the big translucent black bar bellow the banner on :before atribute*/
+#header-bottom-right {
+  border-radius:0px !important;
+  top:301px;
+  font-family: "Trebuchet MS";
+  right: 0px;
+  z-index: 1001;
+  padding-left: 0px;
+  padding-bottom: 0px;
+  padding-top: 8px;
+  padding-right: 20px;
+  background: #000c;
+}
+#header-bottom-right::before {
+
+  height: 29px;
+  background: #000c;
+  position: absolute;
+  top: 0px;
+  right: 100%;
+  z-index: 30;
+  content: "";
+  width: 3000%;
+
+}
+
+/*The reddit alien icon stuff*/
+#header-img {
+  display:none;
+}
+
+
+/*Name of the page itself, in this case is 'ryzemains'*/
+
+.pagename {
+  position: relative;
+  top: 20%;
+  color: gainsboro;
+  font-family: "Trebuchet MS";
+  font-size: 60px;
+}
+
+.pagename a:hover {
+  opacity: 1;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+/*The menu usualy below or on the banner itself*/
+.tabmenu {
+
+  width:80%;
+
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+  position: absolute;
+  z-index: 1002;
+  top: 296px;
+  left: 0px;
+
+}
+.tabmenu li {
+  font-size:16px;
+  font-family:"Trebuchet MS";
+  font-weight: lighter;
+}
+
+.tabmenu li a{
+  background-color:transparent;
+  color:gray;
+  transition: 1s;
+  -webkit-transition: 1s;
+}
+.tabmenu li :hover {
+  background-color:transparent;
+  color:white;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+}
+.tabmenu li.selected a{
+  background-color:transparent;
+  color:white;
+  border:none;
+}
+
+/*This is the right side bar with the images and rules*/
+.side {
+  /* border-left: 1px #966f36 solid; Golden line on the side that fits well with the client design*/
+  /*border-bottom: 1px #966f36 solid; */
+
+  /*box-shadow: 0px 0px 6px 0px black;*/
+
+  padding-top: 10px;
+  outline: #111318 2px solid;
+  box-shadow: 0px 4px 8px -2px black;
+}
+
+/* This is related to the subscriber text below the link/text section */
+.subscribers {
+  text-align: left;
+  background: #111318;
+  position: relative;
+  bottom: 150px;
+  padding: 6px;
+  display: table;
+  color: gray;
+}
+
+/*This makes the empty box below the text on the subscriber button disappear*/
+.error.create-multi-error {
+  display: none;
+}
+
+/* Do I need to explain this ? */
+.users-online {
+  color: gray;
+  text-align: left;
+  background: #111318;
+  position: relative;
+  bottom: 125px;
+  padding: 6px;
+  display: table;
+}
+.users-online:before {
+  content: none;
+}
+
+span.word {
+  margin-left: 2px;
+}
+
+/* To change the text from the Users Online and Subs */
+/*.titlebox .word { display: none; }
+.subscribers .number:after { content: ' waiting for the next rework'; }
+.users-online .number:after { content: ' pressing EQ'; } */
+
+/* This is related to your status in the subreddit */
+.leavemoderator, .titlebox form.toggle {
+  font-size: 9px;
+  margin-left: 10px;
+  margin-top: 10px;
+  position: relative;
+  top: -50px;
+}
+
+/* This removes the "who created this awesome subreddit?" */
+.titlebox .bottom {
+  display: none;
+}
+
+/* Makes the margin betweens links bigger, looks nicer */
+div#moderation_tools.sidecontentbox.collapsible ul.content li ul.flat-vert.icon-menu.hover li {
+  margin: 10px;
+}
+
+/* Removes the border from mod tools */
+div#moderation_tools.sidecontentbox .content{
+  border: none;
+}
+
+/* Spam topics color fixed */
+.thing.spam {
+  background-color: #082535;
+}
+
+/* Also a color fix for spam topic */
+.comment.spam > .child, .message.spam > .child {
+  background-color: transparent;
+}
+
+/* Same as above */
+.spam.comment div.entry.unvoted ul.flat-list.buttons li b {
+  color: gainsboro;
+}
+
+/* Aligns the title in the center */
+.sidecontentbox .title {
+  text-align: center;
+}
+
+/* Makes the moderators title like the h1 links */
+.sidecontentbox .title h1 {
+  color: gainsboro;
+  font-family: "Trebuchet MS";
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: bold;
+  background: #082535;
+  display: block;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+/* This makes the mod tools looks cool xd */
+div#moderation_tools.sidecontentbox {
+  background-color: #181a20;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+/* Removes that white background from the modtools block links*/
+div#moderation_tools.sidecontentbox.collapsible ul.content li ul.flat-vert.icon-menu.hover li a {
+  background: none;
+  font-family: "Trebuchet MS";
+  color: #4c5462;
+}
+.sidecontentbox .collapse-button {
+  width: inherit;
+  display: block;
+  border: none;
+  background: transparent;
+  border-radius: 0px;
+  color: gray;
+  margin: 0px;
+}
+
+/* Removes border from the showing moderators from this subreddit */
+div.side div.spacer div.sidecontentbox ul.content {
+  background: none;
+  border: none;
+  font-family: "Trebuchet MS";
+  color: #4c5462;
+}
+.side div.spacer div.sidecontentbox ul.content li span.flair.flair-masteryText {
+  font-size: 0px;
+  float: right;
+  position: relative;
+  bottom: 36px;
+}
+
+.side div.spacer div.sidecontentbox ul.content li a.author {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 20px;
+  font-size: small;
+  color: #adb0ba;
+
+}
+
+.side div.spacer div.sidecontentbox ul.content li a.author:hover {
+  background-color: #16181e !important;
+}
+
+/* Makes the title in the middle */
+html.FB_FW_ext.eidReader.js.cssanimations.csstransforms body.contributor.moderator.loggedin.listing-page.hot-page div.side div.spacer div.sidecontentbox div.title {
+  text-align: center;
+}
+
+div.sidecontentbox a.helplink {
+  padding: 5px;
+  font-size: 14px;
+  background: #212d60;
+  color: gainsboro;
+  font-weight: lighter;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  font-family: "Trebuchet MS";
+  float: none;
+  display: block;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+div.sidecontentbox a.helplink:hover {
+  background: #313f7b;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+}
+
+/* The subscribe button */
+
+.titlebox .fancy-toggle-button {
+  margin: 0px;
+  width: 100%;
+  position: relative;
+  bottom: 5px;
+}
+.toggle .option.active {
+  display: block;
+}
+.fancy-toggle-button .active {
+  border: none;
+  border-radius: 0px;
+  font-size: 18px;
+  font-family: "Trebuchet MS";
+  background: #212d60;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  line-height: normal;
+  text-transform: uppercase;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+}
+.fancy-toggle-button .active:hover {
+  background: #313f7b;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+}
+
+/* Here goes some RES Special things */
+
+.res-voteEnhancements-highlightScores span.score {
+  color: gray!important;
+}
+
+.res .entry {
+  transition: 0.2s;
+}
+
+div.RES-keyNav-activeElement {
+  background-color: transparent!important;
+  padding-left: 8px!important;
+  border-left: 2px solid gray;
+}
+
+.res-commentNavToggle {
+  color: gray;
+}
+
+.res-commentBoxes.res-commentBoxes-rounded .comment {
+  border: none !important;
+}
+
+
+
+html.res-commentBoxes .comment .comment,
+html.res-commentBoxes .comment .comment .comment .comment,
+html.res-commentBoxes .comment .comment .comment .comment .comment .comment,
+html.res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment,
+html.res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
+html.res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
+html.res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
+html.res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
+html.res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {
+  background-color: #181a20 !important;
+}
+
+
+html.res-commentBoxes .comment,
+html.res-commentBoxes .comment .comment .comment,
+html.res-commentBoxes .comment .comment .comment .comment .comment,
+html.res-commentBoxes .comment .comment .comment .comment .comment .comment .comment,
+html.res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment .comment,
+html.res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
+html.res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
+html.res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
+html.res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
+html.res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {
+  background-color: #111318 !important;
+}
+
+#subButtons-ryzelayoutprobs > span.res-fancy-toggle-button.RESDashboardToggle, #subButtons-ryzelayoutprobs > span.res-fancy-toggle-button.RESshortcutside, #subButtons-RyzeMains > span.res-fancy-toggle-button.RESDashboardToggle, #subButtons-RyzeMains > span.res-fancy-toggle-button.RESshortcutside, #REScommentSubToggle {
+  border: none;
+  border-radius: 0px;
+  font-size: 18px;
+  font-family: "Trebuchet MS";
+  background: #082535;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  line-height: normal;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  width: 44%;
+  position: relative;
+  left: 2px;
+}
+
+#subButtons-ryzelayoutprobs > span.res-fancy-toggle-button.RESDashboardToggle:hover, #subButtons-ryzelayoutprobs > span.res-fancy-toggle-button.RESshortcutside:hover, #subButtons-RyzeMains > span.res-fancy-toggle-button.RESDashboardToggle:hover, #subButtons-RyzeMains > span.res-fancy-toggle-button.RESshortcutside:hover, #REScommentSubToggle:hover {
+  background: #212d60;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+}
+
+form.toggle.res-sr-style-toggle {
+  position: relative;
+  top: -8px;
+}
+
+.res-navTop #header-bottom-right {
+  top: 319px;
+  height: 21px;
+}
+
+.res-navTop .tabmenu {
+  top: 312px;
+}
+html .entry.res-selected, html div.entry.res-selected, html .entry.res-selected .md-container {
+  background-color: #181a20!important;
+}
+
+div#srLeftContainer, div#RESShortcutsViewport, #RESShortcutsEditContainer {
+  background: #101010;
+  color: #dcdcdc;
+}
+
+
+#header {
+  border: none;
+  background: #101010;
+}
+
+.titlebox div.tagline {
+  position: relative;
+  top: -50px;
+  margin-bottom: -50px;
+}
+
+/* This whole thing here is the box when you hover the subscribe button */
+.hover-bubble, .hover-bubble.multi-selector label:hover{
+  background-color: #080d18;
+  color: gainsboro;
+}
+/* The arrow on the right of the bubble */
+.hover-bubble.anchor-right::after {
+  border-left-color: #082535;
+}
+.hover-bubble.anchor-right::before {
+  border-left-color: #082535;
+}
+.hover-bubble {
+  border-color: #082535;
+}
+
+.hover-bubble.multi-selector strong {
+  color: gainsboro;
+}
+
+/* The karma box */
+.linkinfo {
+  border: none;
+  color: gainsboro;
+  border-radius: 0px;
+  background-color: #080d18;
+}
+
+div.side div.spacer div.linkinfo div.shortlink input#shortlink-text {
+  background: linear-gradient(#060608,#111318);
+  color: gainsboro;
+}
+
+.spacer, .side, .titlebox form.toggle, .leavemoderator, icon-menu a {
+  background-color: #111318;
+}
+
+/* This will get rid of the reddit premium ad, we're a page of mains who cares about premium reddit */
+.premium-banner{
+   display: none;
+}
+
+/* Getting rid of the "make your subreddit button" cuz I don't like it */
+.sidebox.create {
+  display: none;
+}
+
+
+
+/*This here is related to the menu bar in post link or text section --------------------------------------------------------------*/
+
+.tabmenu.formtab .selected a {
+  font-size: 100%;
+  background: none;
+}
+ul.tabmenu.formtab {
+  padding-left: 0px;
+}
+
+.tabmenu.formtab a {
+  border: none;
+
+}
+.content h1 {
+  display: none;
+}
+
+.formtabs-content {
+  border: none;
+  width: 79%;
+}
+
+.formtabs-content .infobar {
+  box-shadow: none;
+  padding: 12px;
+  margin-bottom: 20px;
+}
+
+.spacer div#text-field.roundfield {
+  background: #111318;
+}
+
+.roundfield {
+  background: none;
+  border: none;
+  /* box-shadow: 0 8px 6px -6px black; */
+  color: Gainsboro;
+}
+
+.roundfield .title {
+  color: Gainsboro;
+}
+
+.roundfield .title * {
+  color: Gainsboro;
+}
+
+.roundfield textarea, .roundfield input[type="text"], .roundfield input[type="url"], .roundfield input[type="password"], .roundfield input[type="number"], #compose-message .roundfield select {
+  border: 1px solid #272c38;
+  background: #111318;
+  color: Gainsboro;
+  max-width: 230%;
+}
+
+/* This is to change the background of the "drop here" box for uploading images, took a while to find */
+#new-link-image-input.image-post-upload.image-upload-drop-target {
+  background: none;
+}
+
+/* Too tired to note what everything does here, but it's related to space between boxes and the submit button style */
+
+input#sr-autocomplete {
+  color: white;
+}
+
+.spacer button.btn {
+  padding: 5px 122px 5px;
+  border: none;
+  border-radius: 4px;
+  color: #111318;
+  font-family: "Trebuchet MS";
+  font-weight: lighter;
+  font-size: 60px;
+  background-color: #966f36;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  box-shadow: 0 8px 6px -6px black;
+}
+
+.spacer button.btn:hover {
+  background-color: #c59247;
+}
+
+.submit.content.warn-on-unload div.spacer:last-child {
+  background: none;
+}
+
+.submit.content.warn-on-unload div.roundfield.info-notice {
+  display: none;
+}
+
+.submit.content.warn-on-unload div#items-required {
+  color: #966f36;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------*/
+
+/* This is related to the comment section */
+
+/* This is the sorting menu bar */
+.commentarea .menuarea {
+  border: none;
+  padding: 0;
+  color: gray;
+  position: relative;
+  top: 15px;
+  background: #111318;
+  display: inline;
+  width: auto;
+}
+
+.md-container div.md blockquote {
+  background: #082535;
+}
+
+/* This changes the color of the doted left border on each comment */
+.comment .child, .comment .showreplies {
+  border-left: 1px solid #181a20;
+}
+
+/* This fixes the size of the comments on the whole body of the page */
+.commentarea {
+  margin-right: 320px;
+  background: #111318;
+  box-shadow: 0px 10px 10px -10px;
+}
+
+/* This is the area where the save button and comment box is located in */
+.commentarea > .usertext {
+  background: #111318;
+  padding-top: 15px;
+}
+
+/* This creates a shadow below every main comment */
+/*.sitetable.nestedlisting > * {
+  box-shadow: 4px 12px 6px -10px;
+} */
+/* nvm the shadow, I'll put a gray border below every direct response to the topic */
+.sitetable.nestedlisting > .noncollapsed.comment {
+  border-top: 5px solid #181a20;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.panestack-title {
+  border: none;
+  padding-top: 10px;
+}
+
+.new-comment .usertext-body {
+  background-color: #111318;
+  border: none;
+}
+
+/* Width of the up/down votes to fit all characters */
+.link .midcol {
+  width: auto !important;
+}
+
+/* The sticky links will have a green left border now */
+.sitetable.linklisting div#thing_t3_bv69ya.thing.id-t3_bv69ya.linkflair.odd.stickied.link.self {
+  border-left: 2px solid #273a27;
+}
+
+.link .usertext-body .md {
+  background: #082535;
+  border: none;
+  border-radius: 2px;
+  box-shadow: 0px 0px 6px 0px #061b26;
+}
+
+.link .usertext-body .md p{
+  color: gainsboro;
+}
+
+.new-comment .usertext-body p {
+  color: gainsboro;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.usertext-edit.md-container div.md textarea {
+  background: #111318;
+  border: 1px solid #272c38;
+  color: gainsboro;
+  max-width: 200%;
+}
+
+.panestack-title .title {
+  color: gray;
+}
+
+/* Related to the comment box itself */
+.entry {
+  padding-left: 5px;
+}
+
+/*Same but for the crosspost */
+.crosspost-preview {
+  background: #082535;
+  border: none;
+  border-radius: 2px;
+  box-shadow: 0px 0px 6px 0px #061b26;
+  color: gainsboro;
+}
+
+.entry p{
+  color: #adb0ba;
+}
+
+.comment {
+  background-color: #111318;
+  padding-top: 2px;
+  margin-left: 0px;
+  padding-bottom: 2px;
+}
+
+/*This is the box when you click to sort them on the comments */
+div.spacer div.drop-choices.lightdrop.inuse {
+  border: 1px #966f36 solid;
+}
+div.spacer div.drop-choices.lightdrop.inuse a{
+  background-color: #111318;
+  color: gainsboro;
+}
+div.spacer div.drop-choices.lightdrop.inuse a:hover{
+  background-color: #363c4b;
+}
+
+/* I have no idea what this is for, it says contest mode for comments, never saw this tbh */
+.infobar.mellow {
+  box-shadow: 0 8px 6px -6px black;
+  background-color: #080d18;
+  border: none;
+  color: #ababab;
+}
+/* This is the splash screen after trying to report a topic */
+.report-modal .report-reason-item .report-reason-display {
+  color: gainsboro;
+  font-family: "Trebuchet MS";
+}
+
+/* this is the splash screen that comes after you try to comment or upvoted an archived topic */
+img.interstitial-image {
+  display:none;
+}
+.modal-body {
+  background: #151515;
+  border: none;
+}
+.report-modal .report-form-bottom-panel .report-form-content-policy p {
+  color: gainsboro;
+}
+
+.interstitial p, .interstitial h3 {
+  color: gainsboro;
+}
+
+.gold-accent {
+  background-color: #111318;
+  box-shadow: 0 3px 6px 0px black;
+  border: 1px #284e63 solid;
+  color: gainsboro;
+}
+
+.gold-accent.comment-visits-box {
+  margin: 10px 10px 15px;
+  padding: 7px 10px 7px 7px;
+  max-width: 1000px;
+  border: none;
+  box-shadow: none;
+  font-family: "Trebuchet MS";
+}
+
+.gold-accent.comment-visits-box div.title {
+  color: #adb0ba;
+}
+
+.error {
+  color: #cebaba;
+  font-size: small;
+  background-color: #111318;
+  outline: 1px #284e63 solid;
+  border-radius: 4px;
+  padding: 2px;
+  width: 75%;
+}
+
+.sitetable.nestedlisting p#noresults.error {
+  outline: none;
+  margin-left: 10px;
+  color: #adb0ba;
+}
+
+
+
+/* Splash screen when you're not logged and wants to comment a topic */
+
+.infobar.commentsignupbar {
+  box-shadow: none;
+}
+
+.commentsignupbar__textarea {
+  border: none;
+  background: #181a20;
+  top: 15px;
+}
+
+.commentsignupbar__container {
+  background: transparent;
+  max-width: none;
+}
+
+.commentsignupbar__textarea-above div.commentsignupbar__cta-container span.c-btn.c-btn-primary.commentsignupbar__cta-button, .spacer div#image-field.roundfield div.roundfield-content div#new-link-image-input.image-post-upload.image-upload-drop-target label.file-upload-button.c-btn.c-btn-primary {
+  background: #082535;
+  color: gainsboro;
+  border-radius: 0px;
+  border: none;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+}
+
+.commentsignupbar__textarea-above div.commentsignupbar__cta-container span.c-btn.c-btn-primary.commentsignupbar__cta-button:hover, .spacer div#image-field.roundfield div.roundfield-content div#new-link-image-input.image-post-upload.image-upload-drop-target label.file-upload-button.c-btn.c-btn-primary:hover {
+  background: #212d60;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+}
+
+/* The buttons below the comment box */
+
+.usertext .help-toggle, .usertext a.reddiquette {
+  background: #082535;
+  color: #8996ab;
+  margin-left: 0px;
+  padding: 5px;
+  font-family: "Trebuchet MS";
+  font-size: unset;
+  width: 25%;
+  text-align: center;
+  margin-right: 5px;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+}
+
+.usertext .help-toggle:hover , .usertext a.reddiquette:hover {
+  background: #212d60;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+}
+
+.usertext .help-toggle a {
+  color: #8996ab;
+}
+
+.usertext button {
+  font-size: 20px;
+  background: #082535;
+  border: none;
+  border-radius: 0px;
+  color: #8996ab;
+  padding-right: 5px;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  width: 21%;
+  font-weight: lighter;
+  padding-top: 0px;
+  padding-bottom: 1px;
+  text-align: center;
+}
+
+.usertext button:hover {
+  background: #212d60;
+}
+
+.usertext-buttons span.status {
+  color: gainsboro;
+}
+
+/* The markdown help */
+
+.usertext .markhelp, .markhelp table.md tbody tr td {
+  color: #adb0ba;
+}
+
+.markhelp table.md tbody tr td pre {
+  background: #181a20;
+}
+
+.markhelp table.md tbody tr:nth-of-type(1) td:nth-of-type(1), .markhelp table.md tbody tr:nth-of-type(1) td:nth-of-type(2) {
+  background: #2b2f3b;
+}
+
+/* The reply option */
+
+.reply-button.login-required {
+  background: #082535;
+}
+
+.reply-button.login-required:hover {
+  background: #212d60;
+}
+
+.buttons .give-gold.gold-give-gold {
+  color: #888;
+}
+
+.entry .buttons li a {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.entry .buttons li a:hover {
+  color: gainsboro;
+  text-decoration: none;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+/* The appearance of the author text title on the comments */
+
+.tagline .author {
+  font-family: "Trebuchet MS";
+}
+
+.tagline .author.submitter {
+  color: gainsboro;
+  background: #10324a;
+  padding: 3px 10px 3px 0px;
+  border-radius: 20px;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+}
+
+.tagline .author.submitter:hover {
+  background: #082535;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  text-decoration: none;
+}
+
+.tagline .author.submitter::before {
+  background: #082535;
+  padding: 3px 7px 3px 10px;
+  border-radius: 20px 0px 0px 20px;
+  font-size: 10px;
+  content: "OP ";
+  margin-right: 7px;
+}
+.comment div.entry.likes p.tagline span.userattrs, .link div.entry.dislikes div.top-matter p.tagline span.userattrs, .link div.entry.likes div.top-matter p.tagline span.userattrs {
+  display: none;
+}
+
+.comment .tagline {
+  margin-top: 3px;
+}
+
+/* Mods and admins I guess */
+
+/* Buttons for aprovo or not */
+
+.big-mod-buttons span a, .big-mod-buttons a.pretty-button.access-required.neutral {
+  color: #dcdcdc;
+  background: #082535 !important;
+  border: none;
+  border-radius: 0px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.big-mod-buttons span a:hover, .big-mod-buttons a.pretty-button.access-required.neutral:hover {
+  background: #212d60 !important;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+div.thing .tagline .author.moderator::before {
+  background: #282 !important;
+  content: "M ";
+}
+
+div.thing .tagline .author.moderator::before, div.thing .tagline .author.admin::before {
+  padding: 3px 7px 3px 10px;
+  border-radius: 20px 0px 0px 20px;
+  font-size: 10px;
+  margin-right: 7px;
+}
+body div .thing .tagline .author.moderator, div.thing .tagline .author.admin {
+  color: gainsboro;
+  background: #1A4B17;
+  padding: 3px 10px 3px 0px;
+  border-radius: 20px;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+}
+
+body div .thing .tagline .author.moderator:hover, div.thing .tagline .author.admin:hover {
+  background: #282;
+  text-decoration: none;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+}
+div.top-matter p.tagline {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.commentarea .sitetable {
+  background: transparent;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------*/
+
+/* This whole shit makes the submit buttons aside and gets that ugly background out of them, puts few transitions also */
+
+.sidebox.submit {
+  position:absolute;
+}
+.morelink a {
+  color: gainsboro;
+  background: #082535;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+}
+.morelink a:hover{
+  background: #212d60;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+}
+.morelink {
+
+  background: none;
+  border: none;
+  height: 50px;
+  line-height: 46px;
+}
+.submit-link {
+  border: none;
+  font-size:28px;
+  font-family:"Trebuchet MS";
+  font-weight: lighter;
+  width: 140px;
+  margin-left: 10px;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+}
+/*.submit-link:hover {
+  box-shadow: -5px 0px 0px 0px #966f36;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+}*/
+.submit-text {
+  border: none;
+  font-size:28px;
+  font-family:"Trebuchet MS";
+  font-weight: lighter;
+  width:135px;
+  margin-left:151px;
+  background: none;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+}
+/*.submit-text:hover {
+  box-shadow: 5px 0px 0px 0px #966f36;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+}*/
+
+/* if not logged this will get rid of the subtitle that I dislike */
+.subtitle {
+  display:none;
+}
+
+.disabled .morelink{
+  font-size:18px;
+  font-family:"Trebuchet MS";
+  font-weight: lighter;
+  background: black!important;
+  width: 280px;
+  margin: 10px;
+  color: #966f36
+}
+.disabled .morelink:hover{
+  /* Nothing here just I got confused with this whole thing, I'll leave this here for less confusion */
+}
+
+.disabled .morelink a{
+  border: 1px #966f36 solid;
+  color: #966f36
+}
+
+.disabled .morelink a:hover{
+  border: 1px #966f36 solid;
+  color: #b18340
+}
+
+/* End of the submit button part */
+
+/* Loging box so boring but it's looking sick*/
+
+/* This here will remove that ugly gray border of the whole loging box */
+.login-form-side {
+  border:none;
+  background-color: transparent;
+}
+
+/* This here will round up the corners */
+.login-form-side input[type=text], .login-form-side input[type=password] {
+  font-family: trebuchet MS;
+  font-size: 14px;
+  border: none;
+  border-radius: 0px;
+  background: transparent;
+  color: Gainsboro;
+  border-bottom: 1px solid rebeccapurple;
+}
+
+/* This doesn't need explanation */
+.login-form-side #remember-me {
+  color: gainsboro;
+}
+
+/* This changes the loging button and rounds it's corners */
+form#login_login-main.login-form.login-form-side div.submit button.btn {
+  padding: revert;
+  border: none;
+  background: #082535;
+  color: gainsboro;
+  font-size: 24px;
+  border-radius: 0px;
+  box-shadow: none;
+  width: 250%;
+  position: relative;
+  left: -150%;
+}
+
+form#login_login-main.login-form.login-form-side div.submit button.btn:hover {
+  background: #212d60;
+}
+
+/* This colorizes the wrong password message you get by being dumb */
+.login-form-side .status {
+  color: gainsboro;
+}
+
+/* This removes the border from the "reset password" */
+.attention {
+  border: none;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------*/
+
+/* Search box part */
+.side #search input[type=text] {
+  border: none;
+  background: transparent;
+  margin-left: 10px;
+  width:280px;
+  color: Gainsboro;
+  box-shadow: 0px 8px 4px -8px black;
+  border-bottom: #663399 1px solid;
+}
+/* This will round up the corners of the searchbox */
+form#search input[type=text]{
+border-radius: 0px;
+-moz-border-radius: 0px;
+-webkit-border-radius: 0px;
+}
+/* The infobar is the little box that spawns after clicking on the searchbox*/
+.infobar, .reddit-infobar {
+  box-shadow: 0 8px 6px -6px black;
+  background-color: #080d18;
+  border: none;
+  color: Gainsboro;
+}
+/* The cookies annoying splash text screen */
+.infobar-toaster-container > * .reddit-infobar {
+  background: #111318;
+  color: gainsboro;
+  border: none;
+  border-radius: 5px;
+}
+/* And the text */
+.infobar-toaster-container form#eu-cookie-policy div.reddit-infobar.md-container-small.with-icon.with-btn.cookie-infobar div.md p, .reddit-infobar p {
+  color: gainsboro;
+}
+/*---------------------------------------------------------------------------------------------------------------------------*/
+
+/*I'll forget about this soon, this is the title of of the name placed in the side bar*/
+.titlebox {
+  text-align: center;
+  margin-top: 70px;
+}
+.titlebox h1.hover.redditname a {
+  text-align: center;
+  background: #111318cc;
+  padding: 6px;
+  color: gray;
+  display: block;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+}
+.titlebox h1.hover.redditname a:hover {
+  color: gainsboro;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+}
+.titlebox h1.hover.redditname a:before {
+  content: "/r/";
+}
+
+/*This is related to the POST buttons*/
+.morelink .nub {
+  display:none; /*This thing removes the triangle shape from the buttons*/
+}
+
+/*---------------------------------------------------------------------------------------------------------------------------*/
+
+/*---------------------------------------------------------------------------------------------------------------------------*/
+
+/* This is where the area that contains the topics */
+
+/*the top bar when a video is playing in the background*/
+
+html .pinnable-content.pinned {
+  background-color: #111318!important;
+  z-index: 3001!important;
+}
+
+/*this is the looks of the lists in the comments*/
+.commentarea .md-container div.md ul li {
+  border: 1px dashed #111318;
+  background: #2d2d2d;
+}
+
+/*this will fix the looks of the <code> tag in the comments*/
+.commentarea .md-container div.md pre {
+  color: gray;
+  background: #16181e;
+  border: 1px dashed gray;
+}
+
+/*this is the little number showing the position of the topic itself, i don't like it, go away plz*/
+.link .rank {
+  display: none;
+}
+
+/* The color of the sorting menu area */
+.content div.menuarea {
+  color: gray;
+  border: none;
+}
+.content div.menuarea div.spacer {
+  background: none;
+}
+
+/*the look of the number counting likes/dislikes*/
+.link .score {
+  color:gainsboro!important;
+  padding: 5px;
+  font-family: "Trebuchet MS";
+  font-weight: lighter;
+  font-size: 14px;
+}
+
+/*
+.link .score[title~="1"], .link .score[title~="2"], .link .score[title~="3"], .link .score[title~="4"], .link .score[title~="5"], .link .score[title~="6"], .link .score[title~="7"], .link .score[title~="8"], .link .score[title~="9"] {
+  color:gainsboro!important;
+  animation: none;
+}
+.link .score[title~="50"], .link .score[title~="51"], .link .score[title~="52"], .link .score[title~="53"], .link .score[title~="54"], .link .score[title~="55"], .link .score[title~="56"], .link .score[title~="57"], .link .score[title~="58"], .link .score[title~="59"], .link .score[title~="60"], .link .score[title~="61"], .link .score[title~="62"], .link .score[title~="63"], .link .score[title~="64"], .link .score[title~="65"], .link .score[title~="66"], .link .score[title~="67"], .link .score[title~="68"], .link .score[title~="69"], .link .score[title~="70"], .link .score[title~="71"], .link .score[title~="72"], .link .score[title~="73"], .link .score[title~="74"], .link .score[title~="75"], .link .score[title~="76"], .link .score[title~="77"], .link .score[title~="78"], .link .score[title~="79"], .link .score[title~="80"], .link .score[title~="81"], .link .score[title~="82"], .link .score[title~="83"], .link .score[title~="84"], .link .score[title~="85"], .link .score[title~="86"], .link .score[title~="87"], .link .score[title~="88"], .link .score[title~="89"], .link .score[title~="90"], .link .score[title~="91"], .link .score[title~="92"], .link .score[title~="93"], .link .score[title~="94"], .link .score[title~="95"], .link .score[title~="96"], .link .score[title~="97"], .link .score[title~="98"], .link .score[title~="99"] {
+  animation: glowtentofifty 2s infinite;
+}
+@keyframes glowtentofifty {
+  0% {
+      text-shadow:
+      0px 1px 1px #4690ec,
+      0px -1px 1px #4690ec,
+      1px 0px 1px #4690ec,
+      -1px 0px 1px #4690ec;
+  }
+  50% {
+      text-shadow:
+      0px 1px 2px #4690ec,
+      0px -1px 2px #4690ec,
+      1px 0px 2px #4690ec,
+      -1px 0px 2px #4690ec;
+  }
+  100% {
+      text-shadow:
+      0px 1px 1px #4690ec,
+      0px -1px 1px #4690ec,
+      1px 0px 1px #4690ec,
+      -1px 0px 1px #4690ec;
+  }
+}
+
+.link .score[title~="10"], .link .score[title~="11"], .link .score[title~="12"], .link .score[title~="13"], .link .score[title~="14"], .link .score[title~="15"], .link .score[title~="16"], .link .score[title~="17"], .link .score[title~="18"], .link .score[title~="19"], .link .score[title~="20"], .link .score[title~="21"], .link .score[title~="22"], .link .score[title~="23"], .link .score[title~="24"], .link .score[title~="25"], .link .score[title~="26"], .link .score[title~="27"], .link .score[title~="28"], .link .score[title~="29"], .link .score[title~="30"], .link .score[title~="31"], .link .score[title~="32"], .link .score[title~="33"], .link .score[title~="34"], .link .score[title~="35"], .link .score[title~="36"], .link .score[title~="37"], .link .score[title~="38"], .link .score[title~="39"], .link .score[title~="40"], .link .score[title~="41"], .link .score[title~="42"], .link .score[title~="43"], .link .score[title~="44"], .link .score[title~="45"], .link .score[title~="46"], .link .score[title~="47"], .link .score[title~="48"], .link .score[title~="49"] {
+
+  animation: glowfiftytohundred 2s infinite;
+}
+@keyframes glowfiftytohundred {
+  0% {
+      text-shadow:
+      0px 1px 1px #5cce86,
+      0px -1px 1px #5cce86,
+      1px 0px 1px #5cce86,
+      -1px 0px 1px #5cce86;
+  }
+  50% {
+      text-shadow:
+      0px 1px 2px #5cce86,
+      0px -1px 2px #5cce86,
+      1px 0px 2px #5cce86,
+      -1px 0px 2px #5cce86;
+  }
+  100% {
+      text-shadow:
+      0px 1px 1px #5cce86,
+      0px -1px 1px #5cce86,
+      1px 0px 1px #5cce86,
+      -1px 0px 1px #5cce86;
+  }
+}
+
+.link .score {
+  animation: glowhundredtoinfinite 2s infinite;
+}
+
+@keyframes glowhundredtoinfinite {
+  0% {
+      text-shadow:
+      0px 1px 1px #d54b29,
+      0px -1px 1px #d54b29,
+      1px 0px 1px #d54b29,
+      -1px 0px 1px #d54b29;
+  }
+  50% {
+      text-shadow:
+      0px 1px 2px #d54b29,
+      0px -1px 2px #d54b29,
+      1px 0px 2px #d54b29,
+      -1px 0px 2px #d54b29;
+  }
+  100% {
+      text-shadow:
+      0px 1px 1px #d54b29,
+      0px -1px 1px #d54b29,
+      1px 0px 1px #d54b29,
+      -1px 0px 1px #d54b29;
+  }
+}
+*/
+
+.link .score[title~="0"]{
+  animation: none;
+  color: gray;
+}
+.dislikes div.score.dislikes[title~="0"] {
+  color:gray;
+  animation: none;
+}
+.likes div.score.likes {
+  color:gainsboro!important;
+}
+.dislikes div.score.dislikes {
+  color:gainsboro!important;
+}
+
+/* The appearance of the sticky topics title*/
+.thing.stickied.link a.title {
+  font-family:"Trebuchet MS";
+}
+
+/* The appearance of the sticky topics */
+.thing.stickied.link {
+  border: 1px solid #26992652;
+  background: #111318;
+}
+
+/* The appearance of the spoiler topic */
+.expando-gate.expando-gate--interstitial {
+  background: #082535;
+}
+.expando-gate .expando-gate__show-once {
+  border-radius: 5px;
+}
+
+/* After clicking "lock" it would turn the text into a dark gray, had to light it up */
+.flat-list li, .flat-list form {
+  color: #414141;
+}
+
+/* The drop menu on prety much any section */
+.drop-choices {
+  background: #1f1f1f;
+  border: none;
+  box-shadow: 0px 5px 6px -4px black;
+  outline: 1px #101010 solid;
+}
+.drop-choices a {
+  color: gray;
+}
+.drop-choices a.choice:hover {
+  background-color: #444;
+}
+
+/*The infobox if topic is archived */
+.archived-infobar, .locked-infobar {
+  box-shadow: 0 8px 6px -6px black;
+  background-color: #080d18;
+  border: none;
+  color: Gainsboro;
+}
+.archived-infobar p ,.locked-infobar p {
+  color: gainsboro;
+}
+
+/* The little spoiler tag on the topics */
+.spoiler-stamp {
+  color: #0152ad;
+}
+
+/* To round up the corners on the thumbnail pics */
+a.thumbnail.invisible-when-pinned.may-blank.loggedin.outbound img {
+  border-radius: 2px;
+}
+
+/*Looks of the promoted topics*/
+.link.promotedlink.promoted, .link.promotedlink.external {
+  background-color: #16181e;
+  border: 1px solid #dddddd42;
+}
+
+.sitetable {
+  /*padding: 10px 320px 10px 10px;*/
+  background-color: #16181e;
+  margin-top: 15px;
+  padding-bottom: 10px;
+  /* box-shadow: 4px 12px 6px -10px; */
+}
+/*This is the topics on the body*/
+/*.link {
+  background-color:#101010;
+  box-shadow: 0 8px 6px -6px black;
+  border:transparent;
+  padding: 10px;
+  margin-right: 320px;
+} */
+.link {
+  border-bottom: 10px solid #111318;
+  padding: 10px;
+  margin-right: 320px;
+}
+
+.link.compressed.title {
+
+  padding: 10px;
+}
+.link .title {
+  color:#d5d5d5;
+  font-family: "Trebuchet MS";
+}
+.link .title :visited {
+  color:gray;
+}
+
+/* When you hover your name, the karma info box and author */
+
+.author-tooltip__head {
+  background-color: #16181e;
+}
+.author-tooltip__credentials-list strong {
+  color: #adb0ba;
+}
+
+/* This is to make more space between upvote butons and the rest, cuz they were overlapping*/
+.link.compressed .midcol {
+  padding-right:10px;
+}
+.comment.noncollapsed .midcol {
+  padding: 5px;
+}
+.gadget .midcol {
+  padding-right:10px;
+}
+
+/*End of the collapse and expand icon things*/
+
+/*---------------------------------------------------------------------------------------------------------------------------*/
+
+/* The edit CSS section itself */
+
+/* Body color */
+.stylesheet-customize-container {
+  padding: 10px;
+  background: #16181e;
+}
+
+/* Margin of text boxes */
+form#subreddit_stylesheet.pretty-form.sr-form div.sheets div.col div div {
+  margin-top: 10px;
+}
+
+/* Padding of the edit box */
+#stylesheet_contents {
+  padding-left: 10px;
+  padding-top: 10px;
+  box-shadow: 0 0px 6px 1px black;
+}
+
+/* This makes the empty box next to "view" disappear*/
+.status.error {
+  display: none;
+}
+
+form#subreddit_stylesheet.pretty-form.sr-form div.sheets div.col div div label {
+  color: gainsboro;
+}
+div#images form#image-upload.image-upload {
+  color: gainsboro;
+}
+
+.description, div.description pre.img-url {
+  color: gainsboro;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------*/
+
+/* This is the search section */
+
+.combined-search-page .search-result-group-header {
+  border-bottom: none;
+  background: #013615;
+  color: gainsboro;
+  padding-left: 10px;
+}
+
+div.search-result-group footer div.nav-buttons span.nextprev a {
+  color: #dcdcdc;
+  background: #082535;
+  border: none;
+  border-radius: 0px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+div.search-result-group footer div.nav-buttons span.nextprev a:hover {
+  background: #212d60;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.combined-search-page div.content {
+  background: #16181e;
+  padding-bottom: 1px;
+}
+
+.combined-search-page .search-subscribe-button .add, .combined-search-page .search-subscribe-button .remove {
+  width: 110px;
+}
+.combined-search-page div.content div.listing.search-result-listing div.search-result-group div.contents > * {
+  background: none;
+  box-shadow: none;
+  border-bottom: 10px solid #111318;
+}
+
+.combined-search-page .search-subscribe-button .add {
+  background: #082535;
+  border-color: none;
+}
+
+.combined-search-page .search-subscribe-button .add:hover {
+  background: #212d60;
+}
+
+.search-expando.collapsed::before {
+  height: 1px;
+  background: rebeccapurple;
+
+}
+
+.combined-search-page .search-expando-button {
+  color: gray;
+  background: #111318;
+  font-family: "Trebuchet MS";
+}
+
+.combined-search-page .search-expando-button:hover {
+  text-decoration: none;
+}
+
+div.search-result-body div.md, div.search-result-body {
+  color: #adb0ba;
+}
+
+.combined-search-page .search-submit-button {
+  background: #082535;
+  border: none;
+  box-shadow: 0px 2px 6px -2px black;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+}
+
+.combined-search-page .search-submit-button:hover {
+  background: #212d60;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+}
+
+form#search input {
+  color: gainsboro !important;
+  background: linear-gradient(#060608,#111318);
+}
+
+.combined-search-page #search {
+  color: gainsboro;
+}
+
+.search-result.search-result-link {
+  background-color:#101010;
+  box-shadow: 0 8px 6px -6px black;
+  border:transparent;
+  padding: 10px;
+}
+
+.search-result-group-header {
+  border-bottom: 1px solid #5a5a5a;
+}
+
+.search-result-group-header span {
+  font-family: "Trebuchet MS";
+  font-weight: lighter;
+}
+
+.search-result.search-result-link.has-thumbnail.has-linkflair a, .search-result.search-result-link.has-thumbnail.has-linkflair p {
+  color: gainsboro;
+}
+
+.search-result.search-result-link.has-thumbnail.has-linkflair a:visited {
+  color: gray;
+}
+.combined-search-page.loggedin.search-page div#header div#header-bottom-left span.hover.pagename.redditname {
+  color: transparent;
+}
+
+.combined-search-page.loggedin.search-page div.side div.spacer div.sidebox.submit.submit-text {
+  position: relative;
+  top: -5px;
+}
+
+.combined-search-page.loggedin.search-page div.side div.spacer div.titlebox {
+  position: relative;
+  top: -5px;
+}
+
+/*------------------------------------------------------------------------------------------------------------------*/
+
+/* This is the moderator reddit options of the subreddit itself */
+
+/* The mobile box of the configs page*/
+.linefield.mobile {
+  background-color: #16181E;
+  border: none;
+}
+
+.contributor.moderator.loggedin div.content div#t5_imaoy.create-reddit.fancy-settings.thing div#sr-form.pretty-form div.linefield{
+  background: #111318;
+  border: none;
+  color: Gainsboro;
+}
+
+
+.contributor.moderator.loggedin div.content div#t5_imaoy.create-reddit.fancy-settings.thing div#sr-form.pretty-form div.linefield .title{
+  color: Gainsboro;
+}
+.contributor.moderator.loggedin div.content div#t5_imaoy.create-reddit.fancy-settings.thing div#sr-form.pretty-form div.linefield input {
+  color: gainsboro;
+}
+
+/* This whole bunch of confusing stuff down below is to correct the little box that appears when you're chosing your flair in a post */
+
+.flairselector.drop-choices.active {
+  visibility: visible;
+  background-color: #FFF;
+  padding: 20px !important;
+  box-shadow: 0px 0px 12px 5px black;
+}
+
+.flairselector form button {
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: bold;
+  display: block;
+  left: 25%;
+  position: relative;
+  margin-top: 10px;
+}
+
+.flairselector .flairselection {
+  margin-bottom: 17px;
+}
+
+.flairselector .customizer {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.side .flairselector {
+position: fixed;
+top: 50px!important;
+left: 50%!important;
+margin-left: -220px;
+width: 400px !important;
+border: none;
+border-radius: 0px;
+}
+
+.flairselector h2 {
+margin-bottom: 4px;
+background-color: transparent;
+color: gainsboro;
+text-align: left;
+text-transform: uppercase !important;
+font-weight: bold;
+font-size: 12px !important;
+}
+
+.flairselector:before {
+display: block;
+position: fixed;
+top: 0px;
+left: 0px;
+z-index: -2;
+overflow: hidden;
+width: 100%;
+height: 100%;
+background-color: #0000005c;
+content: "";
+cursor: default;
+transition: all 0.2s ease;
+pointer-events: none; /*DO NOT REMOVE*/ /*Ok not removing, even tho I removed and nothing changed*/
+}
+
+.flairselector.drop-choices.active {
+  visibility: visible !important;
+  background-color: #181a20;
+  border: none;
+  outline: none;
+}
+
+.flairselector h2 {
+  font-family: "Trebuchet MS";
+  padding: 5px 5px 5px 5px;
+  background-color: #181a20;
+  border: none;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.flairoptionpane {
+  text-align: left;
+  max-height: 500px;
+}
+
+.flairselector .customizer input {
+  background: #0f1114;
+  color: Gainsboro;
+  box-shadow: 0px 8px 4px -8px black;
+  border: none;
+  border-bottom: rebeccapurple 1px solid;
+  width: 200px;
+  text-align: center;
+}
+
+.flairoptionpane ul {
+  visibility: visible !important;
+  max-width: 100%;
+  width: 100%;
+}
+.flairoptionpane ul a.title {
+  font-size: 100% !important;
+}
+
+.flairselector li {
+  padding: 3px 0px 3px 0px;
+  width: 100%;
+  border: none;
+}
+
+.flairselector li:hover {
+  background-color: #181a20;
+  border: none;
+}
+
+.flairselector form {
+  border-top: 1px solid gray;
+}
+
+.flairsample-left {
+  text-align: left !important;
+}
+
+.flairselector ul {
+  overflow: visible;
+}
+
+.flairselector li.selected {
+background-color: #181a20;
+border: none;
+}
+
+/* the messages */
+
+.message-count {
+  color: gainsboro;
+  font-size: 10px;
+  padding: 2px 3px;
+  border-radius: 0px;
+}
+
+/* This is the flairs page on this subreddit */
+
+.tabpane-content {
+  border: none;
+  width: 78%;
+  background: #111318;
+  box-shadow: 0 8px 6px -6px black;
+  color: #dcdcdc;
+}
+
+.usertable > .toggle {
+  background: #082535;
+  border: none;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.usertable > .toggle:hover {
+  background: #212d60;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.pretty-form input[type="text"], .pretty-form textarea, .pretty-form input[type="password"], .pretty-form input[type="number"], #img-name {
+  border: none;
+      border-bottom-color: currentcolor;
+      border-bottom-style: none;
+      border-bottom-width: medium;
+  background: #111318;
+  color: Gainsboro;
+  box-shadow: 0px 8px 4px -8px black;
+  border-bottom: rebeccapurple 1px solid;
+}
+
+#img-name {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+button {
+  color: #dcdcdc;
+  background: #082535;
+  border: none;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #212d60;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.c-btn {
+  color: #dcdcdc;
+  background: #082535;
+  border: none;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  display: block;
+}
+
+.c-btn:hover {
+  background: #212d60;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+/*-------------------------------------------------------WIKI-PART-----------------------------------------------------------------*/
+
+form#editform textarea#wiki_page_content, form#editform input#wiki_revision_reason, .wiki-page-content.md-container div.fancy-settings div.linefield div.linefield-content form#WikiAllowEditor input, div.wiki-page-content.md-container textarea.source {
+  border: none;
+  border-radius: 0px;
+  background: #111318;
+  color: Gainsboro;
+  border-bottom: 1px solid rebeccapurple;
+  text-indent: 5px;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 10px;
+}
+.wiki-page-content.md-container form#editform label {
+  color: gainsboro;
+  margin-left: 12px;
+}
+
+.wiki-page-content.md-container form#editform span.help-toggle.toggle a {
+  margin-left: 12px;
+  margin-top: 10px;
+}
+
+form#editform input#wiki_revision_reason {
+  margin-top: 7px;
+}
+
+.wiki-page .wiki-page-content .wiki_button {
+  color: #dcdcdc;
+  background: #082535;
+  border: none;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+
+}
+
+.wiki-page .wiki-page-content .wiki_button:hover {
+  background: #212d60;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.wiki-page-content.md-container div.fancy-settings div.linefield div.linefield-content form#WikiAllowEditor input {
+  margin-bottom: 10px;
+}
+
+.wiki-page-content.md-container div.md.wiki p, .wiki-page-content.md-container em, .wikirevisionlisting table.generic-table tbody tr.revision td time.live-timestamp, .wiki-page-content.md-container div.description h2 {
+  color: #adb0ba;
+}
+
+.wiki-page-content.md-container em {
+  border-top: 1px solid gray;
+}
+
+.wiki-page-content.md-container hr {
+  display: none;
+}
+
+.wiki-page .pageactions .wikiaction-current {
+  color: gainsboro;
+  background: #212d60;
+  border-radius: 0px;
+}
+
+.wiki-page .pageactions .wikiaction-current:hover {
+  background: #212d60;
+}
+
+.wiki-page .pageactions .wikiaction {
+  color: #adb0ba;
+  border-radius: 0px;
+}
+.wiki-page .pageactions .wikiaction:hover{
+  color: gainsboro;
+  background: #082535;
+}
+
+.wiki-page .pageactions {
+  border-radius: 0px;
+  border: none;
+  border-bottom: 1px solid rebeccapurple;
+}
+
+div#wikiactions.sidecontentbox.collapsible ul.content li ul.flat-vert.icon-menu.hover li a {
+  color: gray;
+  background: none;
+}
+
+div#wikiactions.sidecontentbox.collapsible div.title span.collapse-button, div#wikiactions.sidecontentbox.collapsible ul.content {
+  background: #181a20;
+}
+
+/*-------------------------------------------------------RULES-PART----------------------------------------------------------------*/
+
+.subreddit-rules-page.editable header.md-container div.md, .subreddit-rule-form div.form-inputs div.c-form-group.form-group-kind div.md-container-small div.md {
+  color: #adb0ba;
+}
+
+.subreddit-rule-form div.form-inputs div.c-form-group.form-group-short_name input,
+.subreddit-rule-form div.form-inputs div.c-form-group.form-group-description textarea.c-form-control.text-counter-input,
+.subreddit-rule-form div.form-inputs div.c-form-group.form-group-violation_reason input.c-form-control.text-counter-input {
+  border: none;
+  border-radius: 0px;
+  background: #111318;
+  color: Gainsboro;
+  border-bottom: 1px solid rebeccapurple;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.subreddit-rule-form div.form-inputs div.c-form-group.form-group-short_name input:focus,
+.subreddit-rule-form div.form-inputs div.c-form-group.form-group-description textarea.c-form-control.text-counter-input:focus,
+.subreddit-rule-form div.form-inputs div.c-form-group.form-group-violation_reason input.c-form-control.text-counter-input:focus {
+  box-shadow: none;
+}
+
+/* The "next" button */
+.nextprev a, .next-suggestions a {
+  color: #dcdcdc;
+  background: #082535;
+  border: none;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.nextprev a:hover, .next-suggestions a:hover {
+  background: #212d60;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  border: none;
+}
+
+/*---------------------------------------------END-OF-MY-AMAZING-CSS-CODE----------------------------------------------------------*/
+
+/*------------------------------------------------START-OF-THE-FLAIRS--------------------------------------------------------------*/
+
+/* The flairs page on reddit first */
+
+div.flair-settings.fancy-settings div.pretty-form form div.linefield .title, div.flairgrant.flairlist div.linefield.flair-jump .title, .linefield .title {
+  color: #adb0ba;
+}
+
+.flairgrant.flairlist div.linefield, div.flair-settings.fancy-settings div.pretty-form form div.linefield, .linefield {
+  background: #111318;
+  color: gray;
+  font-family: "Trebuchet MS";
+  width: inherit;
+}
+.flairlist form input, .flairgrant form input#flair_jump_name {
+  border: none;
+  border-radius: 0px;
+  background: #111318;
+  color: Gainsboro;
+  border-bottom: 1px solid rebeccapurple;
+  text-indent: 5px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.flair-jump button {
+  left: 16px;
+  bottom: 30px;
+}
+
+.thing.linkflair p.title a {
+  color: #adb0ba;
+}
+
+.flair {
+padding: 0 10px 0 0;
+margin: 0 10px 0 0;
+vertical-align: middle;
+color: #FFF;
+background: url("%%flairs%%") repeat-y #272727;
+position: relative;
+z-index: 10;
+overflow: hidden;
+border: 1px solid #272727;
+border-radius: 2px;
+box-sizing: content-box;
+height: 30px;
+line-height: 30px;
+width: auto;
+min-width: 20px;
+text-indent: 40px;
+}
+
+.flair[class*="flair-rank-"], .flair[class*="flair-mastery-"], .flair.flair-masteryText {
+min-width: 50px;
+text-indent: 70px;
+}
+
+.flair.flair-masteryText {
+text-indent: 35px;
+}
+
+.flair[class*="flair-rank-"]::before, .flair[class*="flair-mastery-"]::after, .flair.flair-masteryText::after {
+content: "";
+display: block;
+background: 99px 0 / 30px repeat-y;
+position: absolute;
+top: 0;
+left: 30px;
+width: 30px;
+height: 30px;
+}
+
+.flair[class*="flair-rank-"]::before {
+background-image: url("%%ranks%%");
+}
+
+.flair[class*="flair-mastery-"]::after {
+background-image: url("%%masteries%%");
+}
+
+.flair[class*="flair-rank-"][class*="flair-mastery-"] {
+min-width: 80px;
+text-indent: 100px;
+}
+
+.flair[class*="flair-mastery-"].flair-masteryText,
+.flair[class*="flair-rank-"].flair-masteryText {
+min-width: 80px;
+text-indent: 65px;
+}
+
+.flair[class*="flair-rank-"][class*="flair-mastery-"]::after,
+.flair[class*="flair-rank-"].flair-masteryText::after {
+left: 60px;
+}
+
+.flair[class*="flair-rank-"][class*="flair-mastery-"].flair-masteryText {
+min-width: 110px;
+text-indent: 95px;
+}
+
+.flair.flair-masteryText::after {
+content: attr(title);
+color: #fd0;
+text-shadow: 0px 0px 1px #000;
+text-align: left;
+text-indent: 5px;
+width: 0;
+}
+
+.flair.flair-masteryText[class*="flair-mastery-"]::after {
+text-indent: 35px;
+width: 30px;
+}
+
+.flair.flair-masteryText.flair-mastery-5::after {
+color: #ff574d;
+}
+
+.flair.flair-masteryText.flair-mastery-6::after {
+color: #fc30e0;
+}
+
+.flair.flair-masteryText.flair-mastery-7::after {
+color: #27e0d7;
+}
+
+.flair-FizzNormal, .flair-rank-unranked::before, .flair-mastery-1::after {
+background-position: 0 0px !important;
+}
+
+.flair-FizzPassive, .flair-rank-iron::before, .flair-mastery-2::after {
+background-position: 0 -30px !important;
+}
+
+.flair-FizzQ, .flair-rank-bronze::before, .flair-mastery-3::after {
+background-position: 0 -60px !important;
+}
+
+.flair-FizzW, .flair-rank-silver::before, .flair-mastery-4::after {
+background-position: 0 -90px !important;
+}
+
+.flair-FizzEFirst, .flair-rank-gold::before, .flair-mastery-5::after {
+background-position: 0 -120px !important;
+}
+
+.flair-FizzESecond, .flair-rank-platinum::before, .flair-mastery-6::after {
+background-position: 0 -150px !important;
+}
+
+.flair-FizzR, .flair-rank-diamond::before, .flair-mastery-7::after {
+background-position: 0 -180px !important;
+}
+
+.flair-FizzAqua, .flair-rank-master::before {
+background-position: 0 -210px !important;
+}
+
+.flair-FizzAqua, .flair-rank-grandmaster::before {
+background-position: 0 -240px !important;
+}
+
+.flair-FizzAqua, .flair-rank-challenger::before {
+background-position: 0 -270px !important;
+}
+
+.flair-FizzTundra{
+background-position: 0 -240px !important;
+}
+
+.flair-FizzFisher{
+background-position: 0 -270px !important;
+}
+
+.flair-FizzVoid{
+background-position: 0 -300px !important;
+}
+
+.flair-FizzBunny{
+background-position: 0 -330px !important;
+}
+
+.flair-FizzGalactic{
+background-position: 0 -360px !important;
+}
+
+.flair-FizzOmega{
+background-position: 0 -390px !important;
+}
+
+.flair-FizzFuzz{
+background-position: 0 -420px !important;
+}
+
+.flair-FizzFuzzPrestige{
+background-position: 0 -450px !important;
+}

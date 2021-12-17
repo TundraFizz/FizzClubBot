@@ -1,0 +1,44 @@
+
+.flair {
+  padding: 0 10px 0 0;
+  margin: 0 10px 0 0;
+  vertical-align: middle;
+  color: #FFF;
+  background: url("%%flairs%%") repeat-y #272727;
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+  border: 1px solid #272727;
+  border-radius: 2px;
+  box-sizing: content-box;
+  height: 30px;
+  line-height: 30px;
+  width: auto;
+  min-width: 20px;
+  text-indent: 40px;
+}
+
+.flair[class*="flair-rank-"]::before {
+  background: url("%%ranks%%") repeat-y #272727;
+}
+
+.flair[class*="flair-mastery-"]::after {
+  background: url("%%masteries%%") repeat-y #272727;
+}
+
+.flair-FizzNormal,  .flair-rank-unranked::before, .flair-mastery-1::after {background-position: 0    0px !important;}
+.flair-FizzPassive, .flair-rank-bronze::before,   .flair-mastery-2::after {background-position: 0  -30px !important;}
+.flair-FizzQ,       .flair-rank-silver,::before   .flair-mastery-3::after {background-position: 0  -60px !important;}
+.flair-FizzW,       .flair-rank-gold::before,     .flair-mastery-4::after {background-position: 0  -90px !important;}
+.flair-FizzEFirst,  .flair-rank-platinum::before, .flair-mastery-5::after {background-position: 0 -120px !important;}
+.flair-FizzESecond, .flair-rank-diamond::before,  .flair-mastery-6::after {background-position: 0 -150px !important;}
+.flair-FizzR,       .flair-rank-master::before,   .flair-mastery-7::after {background-position: 0 -180px !important;}
+.flair-FizzAqua,    .flair-rank-grandmaster::before                       {background-position: 0 -210px !important;}
+.flair-FizzTundra,  .flair-rank-challenger::before                        {background-position: 0 -240px !important;}
+.flair-FizzFisher                                                         {background-position: 0 -270px !important;}
+.flair-FizzVoid                                                           {background-position: 0 -300px !important;}
+.flair-FizzBunny                                                          {background-position: 0 -330px !important;}
+.flair-FizzGalactic                                                       {background-position: 0 -360px !important;}
+.flair-FizzOmega                                                          {background-position: 0 -390px !important;}
+.flair-FizzFuzz                                                           {background-position: 0 -420px !important;}
+.flair-FizzFuzzPrestige                                                   {background-position: 0 -450px !important;}
